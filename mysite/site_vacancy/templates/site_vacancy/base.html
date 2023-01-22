@@ -6,47 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static "styles\style.css" %}"/>
+    <link rel="stylesheet" href="{% static 'styles\style.css' %}"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
   <header>
     <div class="image">
-      <img src= "{% static 'image/TLog.jpg' %} alt="Картинка">
+      <img src= "{% static 'image/TLog.jpg' %}" alt="Картинка">
     </div>
   </header>
   <main>
+    {% block vacancy_list %}
     <div id="information">
       <div class="conteiner">
         <div class="vacancy-list">
-
           <div class="card-header py-3">
-            <h1 class="name-vacancy">Открытые вакансии</h1>
+            <h1 class="name-vacancy">{{text_vacancy}}</h1>
           </div>
           <div class="card-body">
             <ul class="list-unstyled mb-0">
-              <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#vacancy1">
+              <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="/page_vacancy">
                 <span class="d-inline-block bg-primary rounded-circle p-1"></span>
                 Кладовщик
               </a></li>
-              <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#vacancy2">
+              <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="/page_vacancy">
                 <span class="d-inline-block bg-primary rounded-circle p-1"></span>
                 Машинист экскаватора
               </a></li>
-              <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#vacancy3">
+              <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="/page_vacancy">
                 <span class="d-inline-block bg-primary rounded-circle p-1"></span>
                 Машинист автогрейдера
               </a></li>
-              <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#vacancy4">
+              <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="/page_vacancy">
                 <span class="d-inline-block bg-primary rounded-circle p-1"></span>
                 Машинист грунтового катка
               </a></li>
-              <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#vacancy5">
+              <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="/page_vacancy">
                 <span class="d-inline-block bg-primary rounded-circle p-1"></span>
                 Водитель самосвала
               </a></li>
-              <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#vacancy6">
+              <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="/page_vacancy">
                 <span class="d-inline-block bg-primary rounded-circle p-1"></span>
                 Машинист бульдозера
               </a></li>
@@ -57,18 +57,18 @@
       <div class="about">
         <div class="article">
           <div class="imagelogo">
-            <img src="{% static 'image/Лого3.png' %} alt="Логотип" />
+            <img src="/Users/User/сайт/image/Лого3.png" alt="Логотип" />
           </div>
           <div class="text">
             <h1 class="about-us">О нас</h1>
           </div>
         </div>
         <article class="blog-post">
-          <p>Компания ООО "Транспортная Логистика" образована в 2007г. как автотранспортное подразделение группы компаний ЗАО "СЦЛ" (вертикально интегрированный холдинг, в состав которого входят добывающие, транспортные и судостроительные компании). На сегодняшний день, общая численность сотрудников холдинга составляет около 2000 человек.
-          ООО "Транспортная логистика" специализируется на поставке инертных материалов автомобильным транспортом.</p>
+          <p>{{text_about}}</p>
           <hr>
       </div>
     </div>
+    {% endblock %}
 
     {% block vacancy %}
     {% endblock %}
