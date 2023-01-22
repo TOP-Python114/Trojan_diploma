@@ -13,7 +13,6 @@ def index(request):
         }
     )
 
-
 def page_vacancy(request):
     return render(request, 'site_vacancy/index.html')
 
