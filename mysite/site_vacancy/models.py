@@ -1,6 +1,7 @@
 from django.db import models
 
 
+
 class Vacancy(models.Model):
     position = models.CharField(db_column='Должность', max_length=40)
     salary = models.DecimalField(db_column='Заработная плата', max_digits=8, decimal_places=2)
