@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import Vacancy
 
 
 def index(request):
@@ -14,5 +14,12 @@ def index(request):
     )
 
 def page_vacancy(request):
-    return render(request, 'site_vacancy/index.html')
+    return render(
+        request,
+        'site_vacancy/index.html',
+        {
+            'vacancies': Vacancy.objects.all(),
+        }
+    )
+
 

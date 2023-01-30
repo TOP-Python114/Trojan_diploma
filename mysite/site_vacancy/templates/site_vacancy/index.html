@@ -6,217 +6,36 @@
 
 
 {% block vacancy %}
-          <div id="vacancy">
+
+{% for vacancy in vacancies %}
+    <div id="vacancy">
       <div id="vacancy1">
         <div class="card-header py-3">
-          <h3 class="my-0 fw-normal">Кладовщик
+          <h3 class="my-0 fw-normal">{{ vacancy.position }}
             <img src="https://img.icons8.com/bubbles/50/000000/dump-truck.png"/>
           </h3>
         </div>
         <div class="card-body">
-          <p>60 000 — 75 000 руб.</p>
-          <p>График: Вахта</p>
+          <p>{{ vacancy.salary }}</p>
+          <p>График: {{ vacancy.work_schedule }}</p>
           <ul class="list-unstyled mb-0">
             <li><p>Обязанности:</p>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Контроль погрузо-разгрузочных работ на месторождении <br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Выдача/приём материала(щебень) <br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Формирование транспортной документации <br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Формирование отчетной документации<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Монтаж/демонтаж весов<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Обслуживание весового комплекса, площадки хранения<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Обеспечение сохранности ТМЦ
+              <span class="d-inline-block bg-primary rounded-circle p-1"></span> {{ vacancy.responsibilities }} <br>
             </li>
             <li><p>Требования:</p>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Уверенные навыки работы в Microsoft Office, 1С<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Наличие свидетельства/удостоверения о присвоении квалификации "Контролер склада/Кладовщик" (Желательно)<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Ответственность, внимательность, исполнительность
+              <span class="d-inline-block bg-primary rounded-circle p-1"></span> {{ vacancy.requirements }}<br>
             </li>
             <li><p>Условия:</p>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Официальное трудоустройство по ТК РФ <br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Соц пакет (оплачиваемые больничные, отпуска) <br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Медицинский осмотр за счет работодателя (первичный и ежегодный) <br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Спецодежда за счет работодателя<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Доставка до места работы за счет работодателя<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Размещение в вагон-домах на месторождениях<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Банный комплекс с душевой кабиной, прачечная, wi-fi, оборудованная кухонная зона<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Обучение и получение свидетельства кладовщика за счет работодателя<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Вахта 30/30 с возможностью 60/30 (ХМАО)<br>
-            </li>
-            </a></li>
-          </ul>
-        </div>
-      </div>
-      <div id="vacancy2">
-        <div class="card-header py-3">
-          <h3 class="my-0 fw-normal">Машинист экскаватора
-            <img src="https://img.icons8.com/bubbles/50/000000/dump-truck.png"/>
-          </h3>
-        </div>
-        <div class="card-body">
-          <p>130 000 руб.</p>
-          <p>График: Вахта</p>
-          <ul class="list-unstyled mb-0">
-            <li><p>Обязанности:</p>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Погрузка автомобильного транспорта<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Буртование щебня, песка, гравия<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Вскрышные работы, формирование дорожных откосов
-            </li>
-            <li><p>Требования:</p>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Опыт работы на экскаваторах от 3х лет<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Бережное отношение и уход за техникой
-            </li>
-            <li><p>Условия:</p>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Официальное трудоустройство по ТК РФ <br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Соц пакет (оплачиваемые больничные, отпуска) <br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Медицинский осмотр за счет работодателя (первичный и ежегодный) <br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Спецодежда за счет работодателя<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Доставка до места работы за счет работодателя<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Размещение в вагон-домах на месторождениях<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Банный комплекс с душевой кабиной, прачечная, wi-fi, оборудованная кухонная зона<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Вахта 30/30 с возможностью 60/30 (ХМАО)<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Работа на экскаваторах KOMATSU
-            </li>
-            </a></li>
-          </ul>
-        </div>
-      </div>
-      <div id="vacancy3">
-        <div class="card-header py-3">
-          <h3 class="my-0 fw-normal">Машинист автогрейдера
-            <img src="https://img.icons8.com/bubbles/50/000000/dump-truck.png"/>
-          </h3>
-        </div>
-        <div class="card-body">
-          <p>130 000 руб.</p>
-          <p>График: Вахта</p>
-          <ul class="list-unstyled mb-0">
-            <li><p>Обязанности:</p>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Планирование и грейдирование дорог, перемещение грунтов и сыпучих материалов<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Проведение своевременного обслуживания и ТО<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Работа на XCMG, GR215A
-            </li>
-            <li><p>Требования:</p>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Наличие удостоверения "Тракториста-машиниста" с особой отметкой "машинист автогрейдера"<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Подтвержденный опыт работы в должности машиниста автогрейдера не менее 1 года<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Ответственность, дисциплинированность
-            </li>
-            <li><p>Условия:</p>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Официальное трудоустройство по ТК РФ <br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Соц пакет (оплачиваемые больничные, отпуска) <br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Медицинский осмотр за счет работодателя (первичный и ежегодный) <br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Спецодежда за счет работодателя<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Доставка до места работы за счет работодателя<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Размещение в вагон-домах на месторождениях<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Банный комплекс с душевой кабиной, прачечная, wi-fi, оборудованная кухонная зона<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Вахта 30/30 с возможностью 60/30 (ХМАО)
-            </li>
-            </a></li>
-          </ul>
-        </div>
-      </div>
-      <div id="vacancy4">
-        <div class="card-header py-3">
-          <h3 class="my-0 fw-normal">Машинист грунтового катка
-            <img src="https://img.icons8.com/bubbles/50/000000/dump-truck.png"/>
-          </h3>
-        </div>
-        <div class="card-body">
-          <p>100 000 руб.</p>
-          <p>График: Вахта</p>
-          <ul class="list-unstyled mb-0">
-            <li><p>Обязанности:</p>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Удостоверение тракториста-машиниста категории С<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Подтвержденный опыт работы в должности машиниста катка не менее 1 года<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Работа на Shantui, SR12P-5
-            </li>
-            <li><p>Требования:</p>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Наличие удостоверения "Тракториста-машиниста" с особой отметкой "машинист автогрейдера"<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Подтвержденный опыт работы в должности машиниста автогрейдера не менее 1 года<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Ответственность, дисциплинированность
-            </li>
-            <li><p>Условия:</p>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Официальное трудоустройство по ТК РФ <br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Соц пакет (оплачиваемые больничные, отпуска) <br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Медицинский осмотр за счет работодателя (первичный и ежегодный) <br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Спецодежда за счет работодателя<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Доставка до места работы за счет работодателя<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Размещение в вагон-домах на месторождениях<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Банный комплекс с душевой кабиной, прачечная, wi-fi, оборудованная кухонная зона<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Вахта 30/30 с возможностью 60/30 (ХМАО)
-            </li>
-            </a></li>
-          </ul>
-        </div>
-      </div>
-      <div id="vacancy5">
-        <div class="card-header py-3">
-          <h3 class="my-0 fw-normal">Водитель самосвала
-            <img src="https://img.icons8.com/bubbles/50/000000/dump-truck.png"/>
-          </h3>
-        </div>
-        <div class="card-body">
-          <p>до 100 000 руб.</p>
-          <p>График: Вахта</p>
-          <ul class="list-unstyled mb-0">
-            <li><p>Обязанности:</p>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Работа на самосвалах(Volvo, Man, Scania)<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Управление грузовым автомобилем<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Управление специальным оборудованием автомобиля с соблюдением правил техники безопасности
-            </li>
-            <li><p>Требования:</p>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Опыт работы на самосвалах(Volvo, Man, Scania)<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Наличие водительского удостоверения категорий С,Е<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Ответственность, дисциплинированность<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Наличие карты тахографа
-            </li>
-            <li><p>Условия:</p>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Официальное трудоустройство по ТК РФ <br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Соц пакет (оплачиваемые больничные, отпуска) <br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Медицинский осмотр за счет работодателя (первичный и ежегодный) <br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Спецодежда за счет работодателя<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Доставка до места работы за счет работодателя<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Размещение в вагон-домах на месторождениях<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Банный комплекс с душевой кабиной, прачечная, wi-fi, оборудованная кухонная зона<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Вахта 30/30 с возможностью 60/30 (ХМАО)
-            </li>
-            </a></li>
-          </ul>
-        </div>
-      </div>
-      <div id="vacancy6">
-        <div class="card-header py-3">
-          <h3 class="my-0 fw-normal">Машинист бульдозера
-            <img src="https://img.icons8.com/bubbles/50/000000/dump-truck.png"/>
-          </h3>
-        </div>
-        <div class="card-body">
-          <p>130 000 руб.</p>
-          <p>График: Вахта</p>
-          <ul class="list-unstyled mb-0">
-            <li><p>Обязанности:</p>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Буртование щебня, грунта, планировочные работы, выполнение откосов , разработка траншеи<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Ремонтные работы<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Бульдозеры "Четра"(Т-1101Я1БР-1) / Zoomlion ZD160-3
-            </li>
-            <li><p>Требования:</p>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Опыт работы не менее 3х лет<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Ответственность, дисциплинированность
-            </li>
-            <li><p>Условия:</p>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Официальное трудоустройство по ТК РФ <br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Соц пакет (оплачиваемые больничные, отпуска) <br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Медицинский осмотр за счет работодателя (первичный и ежегодный) <br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Спецодежда за счет работодателя<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Доставка до места работы за счет работодателя<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Размещение в вагон-домах на месторождениях<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Банный комплекс с душевой кабиной, прачечная, wi-fi, оборудованная кухонная зона<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Вахта 30/30 с возможностью 60/30 (ХМАО)<br>
-              <span class="d-inline-block bg-primary rounded-circle p-1"></span> Бульдозеры "Четра"(Т-1101Я1БР-1) / Zoomlion ZD160-3
+              <span class="d-inline-block bg-primary rounded-circle p-1"></span> {{ vacancy.working_conditions }} <br>
+
             </li>
             </a></li>
           </ul>
         </div>
       </div>
     </div>
+
+{% endfor %}
+
 {% endblock %}
 

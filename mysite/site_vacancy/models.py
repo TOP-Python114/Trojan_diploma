@@ -11,5 +11,11 @@ class Vacancy(models.Model):
     working_conditions = models.TextField('Описание')
 
     def __str__(self):
-        return f'{self.position} {self.salary} {self.work_schedule} {self.responsibilities} {self.requirements} {self.working_conditions}'
+        return f'{self.position}'\
+               f' {self.salary} ' \
+               f'{self.work_schedule} ' \
+               f'{self.responsibilities} ' \
+               f'{self.requirements} ' \
+               f'{self.working_conditions}'
+
 
