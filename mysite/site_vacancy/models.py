@@ -18,4 +18,6 @@ class Vacancy(models.Model):
                f'{self.requirements} ' \
                f'{self.working_conditions}'
 
+    def display_res(self):
+        return models.TextField().split('.')
 

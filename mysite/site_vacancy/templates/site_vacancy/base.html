@@ -12,6 +12,7 @@
 </head>
 <body>
   <header>
+
     <div class="image">
       <img src= "{% static 'image/TLog.jpg' %}" alt="Картинка">
     </div>
@@ -21,6 +22,7 @@
     <div id="information">
       <div class="conteiner">
         <div class="vacancy-list">
+          <a href="/create"><button class="btn btn-primary" type="submit">Добавить вакансию</button></a>
           <div class="card-header py-3">
             <h1 class="name-vacancy">{{text_vacancy}}</h1>
           </div>
@@ -70,9 +72,13 @@
     </div>
     {% endblock %}
 
+    {% block content %}
+    {% endblock %}
+
     {% block vacancy %}
     {% endblock %}
 
+    {% block info %}
     <div id="contacts">
       <div class="maps">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2633.0784426406976!2d84.91673474574539!3d56.5673300675119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x432696b700e9339d%3A0x13d4ad77d33ea6fd!2z0J_RgNC40YfQsNC70YzQvdCw0Y8g0YPQuy4sIDIyLCDQotC-0LzRgdC6LCDQotC-0LzRgdC60LDRjyDQvtCx0LsuLCA2MzYwMTM!5e0!3m2!1sru!2sru!4v1666804724324!5m2!1sru!2sru" width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -91,6 +97,7 @@
         <a href="mailto:Priem@tl70.ru?subject=Отклик на вакансию&body=Здравствуйте! Прошу Вас рассмотреть мое резюме.">Priem@tl70.ru</a>
       </div>
     </div>
+    {% endblock %}
   </main>
 </body>
 </html>

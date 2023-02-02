@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Vacancy
+from .forms import VacancyForm
 
 
 def index(request):
@@ -20,6 +21,24 @@ def page_vacancy(request):
         {
             'vacancies': Vacancy.objects.all(),
         }
+    )
+
+def create(request):
+    if request.method == 'POST':
+        form = VacancyForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/page_vacancy')
+
+    form = VacancyForm()
+
+    data = {
+        'form': form
+    }
+
+    return render(
+        request,
+        'site_vacancy/create.html', data
     )
 
 

@@ -93,14 +93,15 @@ p {
 #vacancy {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-}
-
-#vacancy1 {
     float: left;
     margin: 70px;
     padding: 20px;
     border-style: ridge;
     box-shadow: 10px 5px 5px rgb(134, 134, 134);
+}
+
+#vacancy1 {
+
 }
 
 #vacancy2 {

@@ -1,0 +1,26 @@
+{% extends 'site_vacancy/base.html' %}
+
+{% block vacancy_list %}
+
+{% endblock %}
+
+{% block title %}Форма для добавления вакансии{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Форма для добавления вакансии</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.position }}<br>
+            {{ form.salary }}<br>
+            {{ form.work_schedule }}<br>
+            {{ form.responsibilities }}<br>
+            {{ form.requirements }}<br>
+            {{ form.working_conditions }}<br>
+            <button class="btn btn-success" type="submit">Добавить вакансию</button>
+        </form>
+    </div>
+{% endblock %}
+
+{% block info %}
+{% endblock %}

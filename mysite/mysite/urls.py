@@ -19,6 +19,5 @@ from django.urls import path, include
 urlpatterns = [
     # КОММЕНТАРИЙ: два первых адреса ведут к одному и тому же представлению
     path('', include('site_vacancy.urls')),
-    path('page_admin', include('site_vacancy.urls')),
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls)
 ]
