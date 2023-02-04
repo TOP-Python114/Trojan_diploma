@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Vacancy
 from .forms import VacancyForm
+from django.views.generic import DetailView, UpdateView, DeleteView
 
 
 def index(request):
@@ -23,6 +24,22 @@ def page_vacancy(request):
         }
     )
 
+class VacancyDetailView(DetailView):
+    model = Vacancy
+    template_name = 'site_vacancy/detail.html'
+    context_object_name = 'vac'
+
+class VacancyUpdateView(UpdateView):
+    model = Vacancy
+    template_name = 'site_vacancy/create.html'
+    form_class = VacancyForm
+
+class VacancyDeleteView(DeleteView):
+    model = Vacancy
+    success_url = '/page_vacancy'
+    template_name = 'site_vacancy/vacancy-delete.html'
+    context_object_name = 'vac'
+
 def create(request):
     if request.method == 'POST':
         form = VacancyForm(request.POST)
@@ -40,5 +57,4 @@ def create(request):
         request,
         'site_vacancy/create.html', data
     )
-
 

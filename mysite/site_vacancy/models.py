@@ -18,4 +18,5 @@ class Vacancy(models.Model):
                f'{self.requirements} ' \
                f'{self.working_conditions}'
 
-
+    def get_absolute_url(self):
+        return f'/page_vacancy'
