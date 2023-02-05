@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from .models import Vacancy
 from .forms import VacancyForm
@@ -24,6 +25,7 @@ def page_vacancy(request):
         }
     )
 
+
 class VacancyDetailView(DetailView):
     model = Vacancy
     template_name = 'site_vacancy/detail.html'
@@ -40,6 +42,7 @@ class VacancyDeleteView(DeleteView):
     template_name = 'site_vacancy/vacancy-delete.html'
     context_object_name = 'vac'
 
+@login_required
 def create(request):
     if request.method == 'POST':
         form = VacancyForm(request.POST)
