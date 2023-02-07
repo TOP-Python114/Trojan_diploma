@@ -12,17 +12,28 @@
 </head>
 <body>
   <header>
-
     <div class="image">
       <img src= "{% static 'image/TLog.jpg' %}" alt="Картинка">
     </div>
   </header>
   <main>
+    {% block authorization %}
+    <div class="text-end">
+      <a href="/auth/login/"><button type="button" class="btn btn-sm btn-outline-secondary">Войти</button></a>
+      <a href="/auth/register/"><button type="button" class="btn btn-sm btn-outline-secondary">Зарегистрироваться</button></a>
+    </div>
+    {% endblock %}
+    {% if request.user.is_authenticated and request.user.is_staff %}
+      {% block button %}
+        <div class="admin">
+            <a href="/create"><button class="btn btn-success" type="submit">Добавить вакансию</button></a>
+        </div>
+      {% endblock %}
+    {% endif %}
     {% block vacancy_list %}
     <div id="information">
       <div class="conteiner">
         <div class="vacancy-list">
-          <a href="/create"><button class="btn btn-success" type="submit">Добавить вакансию</button></a>
           <div class="card-header py-3">
             <h1 class="name-vacancy">{{text_vacancy}}</h1>
           </div>
@@ -71,6 +82,7 @@
       </div>
     </div>
     {% endblock %}
+
 
     {% block content %}
     {% endblock %}
