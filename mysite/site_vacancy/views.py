@@ -4,6 +4,7 @@ from .models import Vacancy
 from .forms import VacancyForm
 from django.views.generic import DetailView, UpdateView, DeleteView
 
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 def index(request):
     return render(
@@ -15,6 +16,7 @@ def index(request):
                           'ООО "Транспортная логистика" специализируется на поставке инертных материалов автомобильным транспортом.'
         }
     )
+
 
 def page_vacancy(request):
     return render(
@@ -31,12 +33,12 @@ class VacancyDetailView(DetailView):
     template_name = 'site_vacancy/detail.html'
     context_object_name = 'vac'
 
-class VacancyUpdateView(UpdateView):
+class VacancyUpdateView(LoginRequiredMixin, UpdateView):
     model = Vacancy
     template_name = 'site_vacancy/create.html'
     form_class = VacancyForm
 
-class VacancyDeleteView(DeleteView):
+class VacancyDeleteView(LoginRequiredMixin, DeleteView):
     model = Vacancy
     success_url = '/page_vacancy'
     template_name = 'site_vacancy/vacancy-delete.html'

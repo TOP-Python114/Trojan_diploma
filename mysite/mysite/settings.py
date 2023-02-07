@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'site_vacancy.apps.SiteVacancyConfig',
+    'bootstrap5',
     'users.apps.UsersConfig',
 ]
 
@@ -130,4 +131,5 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGIN_URL = 'login/'
+LOGIN_URL = '/auth/login/'
+LOGIN_REDIRECT_URL = '/'

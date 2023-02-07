@@ -1,7 +1,14 @@
 {% extends 'site_vacancy/base.html' %}
 
-{% block vacancy_list %}
+{% load static %}
 
+{% block authorization %}
+{% endblock %}
+
+{% block button %}
+{% endblock %}
+
+{% block vacancy_list %}
 {% endblock %}
 
 
@@ -31,8 +38,13 @@
             </a></li>
           </ul>
         </div>
+        {% if request.user.is_authenticated %}
+        <a href="mailto:Priem@tl70.ru?subject=Отклик на вакансию&body=Здравствуйте! Прошу Вас рассмотреть мое резюме на вакансию {{ vacancy.position }}." class="btn btn-warning">Откликнуться</a>
+        {% endif %}
+        {% if request.user.is_authenticated and request.user.is_staff %}
           <a href="/{{ vacancy.id }}\update" class="btn btn-warning">Редактировать</a>
           <a href="/{{ vacancy.id }}\delete" class="btn btn-danger">Удалить</a>
+        {% endif %}
       </div>
     </div>
 
