@@ -2,7 +2,7 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from .models import Vacancy
 from .forms import VacancyForm
-from django.views.generic import DetailView, UpdateView, DeleteView
+from django.views.generic import UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 def index(request):
@@ -27,11 +27,6 @@ def page_vacancy(request):
         }
     )
 
-
-class VacancyDetailView(DetailView):
-    model = Vacancy
-    template_name = 'site_vacancy/detail.html'
-    context_object_name = 'vac'
 
 class VacancyUpdateView(LoginRequiredMixin, UpdateView):
     model = Vacancy
