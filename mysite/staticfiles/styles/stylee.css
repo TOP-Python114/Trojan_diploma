@@ -56,6 +56,11 @@ p {
     text-align: justify;
 }
 
+.admin {
+    margin-left: 100px;
+    padding: 20px;
+}
+
 #information {
     display: flex;
     grid-template-columns: repeat(2, 1fr);
@@ -104,6 +109,15 @@ p {
 
 span {
     margin-left: 20px;
+}
+
+textarea.form-control {
+    width: 60%;
+    width: 60%;
+}
+
+input[type="text"] {
+    width: 60%;
 }
 
 #contacts {

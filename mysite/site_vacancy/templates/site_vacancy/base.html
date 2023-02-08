@@ -18,10 +18,16 @@
   </header>
 <main>
     {% block authorization %}
+    {% if not request.user.is_authenticated %}
     <div class="text-end">
       <a href="/auth/login/"><button type="button" class="btn btn-sm btn-outline-secondary">Войти</button></a>
       <a href="/auth/register/"><button type="button" class="btn btn-sm btn-outline-secondary">Зарегистрироваться</button></a>
     </div>
+    {% else %}
+    <div class="text-end">
+        <a href="/auth/logout/"><button type="button" class="btn btn-sm btn-outline-secondary">Выйти</button></a>
+    </div>
+    {% endif %}
     {% endblock %}
     {% if request.user.is_authenticated and request.user.is_staff %}
       {% block button %}

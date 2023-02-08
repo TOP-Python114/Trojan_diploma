@@ -5,7 +5,6 @@ from django.shortcuts import redirect
 from django.views.generic import FormView
 
 
-# Create your views here.
 
 
 class UserLoginView(LoginView):
