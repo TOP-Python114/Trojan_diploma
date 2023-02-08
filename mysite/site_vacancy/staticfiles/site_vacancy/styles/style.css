@@ -2,6 +2,7 @@
     
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-stretch: extra-condensed;
+
 }
 
 
@@ -91,8 +92,6 @@ p {
 }
 
 #vacancy {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     float: left;
     margin: 70px;
     padding: 20px;

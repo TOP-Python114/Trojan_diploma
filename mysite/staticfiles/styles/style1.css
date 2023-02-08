@@ -1,5 +1,5 @@
 * {
-    
+
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-stretch: extra-condensed;
 }
@@ -92,7 +92,7 @@ p {
 
 #vacancy {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+
 }
 
 #vacancy1 {
@@ -183,11 +183,6 @@ footer {
     article.blog-post {width: 900px; margin-left: -200px;}
     #vacancy {width: 990px;}
     #vacancy1 {margin-left: 50px; margin-right: 20px;}
-    #vacancy2 {margin-left: 20px; margin-right: 50px;}
-    #vacancy3 {margin-left: 50px; margin-right: 20px;}
-    #vacancy4 {margin-left: 20px; margin-right: 50px;}
-    #vacancy5 {margin-left: 50px; margin-right: 20px;}
-    #vacancy6 {margin-left: 20px; margin-right: 50px;}
     div.maps {margin-left: 20px; float: left;}
     iframe {width: 400px; height: 300px;}
     div.sv {width: 300px; margin-left: 500px;}
@@ -206,11 +201,6 @@ footer {
     article.blog-post {width: 640px; margin-left: -290px;}
     #vacancy {width: 700px; display: block;}
     #vacancy1 {width: 95%; margin-left: 5%;}
-    #vacancy2 {width: 95%; margin-left: 5%;}
-    #vacancy3 {width: 95%; margin-left: 5%;}
-    #vacancy4 {width: 95%; margin-left: 5%;}
-    #vacancy5 {width: 95%; margin-left: 5%;}
-    #vacancy6 {width: 95%; margin-left: 5%;}
     div.maps {margin-left:7%; float: left;}
     iframe {width: 400px; height: 300px;}
     div.sv {width: 250px; margin-left: 500px;}
@@ -228,11 +218,6 @@ footer {
     article.blog-post {width: 580px; margin-left: -180px;}
     #vacancy {width: 700px; display: block;}
     #vacancy1 {margin-left: 30px; margin-right: 20px;}
-    #vacancy2 {margin-left: 20px; margin-right: 30px;}
-    #vacancy3 {margin-left: 30px; margin-right: 20px;}
-    #vacancy4 {margin-left: 20px; margin-right: 30px;}
-    #vacancy5 {margin-left: 30px; margin-right: 20px;}
-    #vacancy6 {margin-left: 20px; margin-right: 30px;}
     div.maps {margin-left: 20px; float: left;}
     iframe {width: 400px; height: 300px;}
     div.sv {width: 300px; margin-left: 500px;}
