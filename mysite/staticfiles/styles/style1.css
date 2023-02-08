@@ -96,59 +96,10 @@ p {
 }
 
 #vacancy1 {
-    float: left;
     margin: 70px;
-    padding: 20px;
+    padding: 50px;
     border-style: ridge;
     box-shadow: 10px 5px 5px rgb(134, 134, 134);
-}
-
-#vacancy2 {
-    float: left;
-    margin: 70px;
-    padding: 20px;
-    border-style: ridge;
-    box-shadow: 10px 5px 5px rgb(134, 134, 134);
-}
-
-#vacancy3 {
-    float: left;
-    margin: 70px;
-    padding: 20px;
-    border-style: ridge;
-    box-shadow: 10px 5px 5px rgb(134, 134, 134);
-}
-
-#vacancy4 {
-    float: left;
-    margin: 70px;
-    padding: 20px;
-    border-style: ridge;
-    box-shadow: 10px 5px 5px rgb(134, 134, 134);
-}
-
-#vacancy5 {
-    float: left;
-    margin: 70px;
-    padding: 20px;
-    border-style: ridge;
-    box-shadow: 10px 5px 5px rgb(134, 134, 134);
-}
-
-#vacancy6 {
-    float: left;
-    margin: 70px;
-    padding: 20px;
-    border-style: ridge;
-    box-shadow: 10px 5px 5px rgb(134, 134, 134);
-}
-
-#vacancy1, #vacancy2, #vacancy3, #vacancy4, #vacancy5, #vacancy6 {
-    position: relative;
-    box-sizing: border-box;
-    display: inline-block;
-    padding: 5px;
-    vertical-align: top;
 }
 
 span {
