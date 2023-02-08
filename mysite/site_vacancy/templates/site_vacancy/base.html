@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'styles\stylee.css' %}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
-    <title>{% block title %}{% endblock %}</title>
+    <title>{% block title %}Главная{% endblock %}</title>
 </head>
 <body>
   <header>
@@ -16,7 +16,7 @@
       <img src= "{% static 'image/TLog.jpg' %}" alt="Картинка">
     </div>
   </header>
-  <main>
+<main>
     {% block authorization %}
     <div class="text-end">
       <a href="/auth/login/"><button type="button" class="btn btn-sm btn-outline-secondary">Войти</button></a>
@@ -31,41 +31,16 @@
       {% endblock %}
     {% endif %}
     {% block vacancy_list %}
+
     <div id="information">
       <div class="conteiner">
-        <div class="vacancy-list">
-          <div class="card-header py-3">
-            <h1 class="name-vacancy">{{text_vacancy}}</h1>
-          </div>
-          <div class="card-body">
-            <ul class="list-unstyled mb-0">
-              <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="/page_vacancy">
-                <span class="d-inline-block bg-primary rounded-circle p-1"></span>
-                Кладовщик
-              </a></li>
-              <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="/page_vacancy">
-                <span class="d-inline-block bg-primary rounded-circle p-1"></span>
-                Машинист экскаватора
-              </a></li>
-              <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="/page_vacancy">
-                <span class="d-inline-block bg-primary rounded-circle p-1"></span>
-                Машинист автогрейдера
-              </a></li>
-              <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="/page_vacancy">
-                <span class="d-inline-block bg-primary rounded-circle p-1"></span>
-                Машинист грунтового катка
-              </a></li>
-              <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="/page_vacancy">
-                <span class="d-inline-block bg-primary rounded-circle p-1"></span>
-                Водитель самосвала
-              </a></li>
-              <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="/page_vacancy">
-                <span class="d-inline-block bg-primary rounded-circle p-1"></span>
-                Машинист бульдозера
-              </a></li>
-            </ul>
-          </div>
-        </div>
+          <h1 class="name-vacancy">{{text_vacancy}}</h1>
+        {% for vacancy in vacancies_list %}
+        <up><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="/page_vacancy">
+            <span class="d-inline-block bg-primary rounded-circle p-1"></span>
+            {{ vacancy.position }}
+        </a></up>
+        {% endfor %}
       </div>
       <div class="about">
         <div class="article">

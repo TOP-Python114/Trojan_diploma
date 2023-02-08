@@ -9,11 +9,11 @@
 {% block vacancy_list %}
 {% endblock %}
 
-{% block title %}Форма для добавления вакансии{% endblock %}
+{% block title %}Добавление/редактирование вакансии{% endblock %}
 
 {% block content %}
     <div class="features">
-        <h1>Форма для добавления вакансии</h1>
+        <h1>Форма для добавления/редактирования вакансии</h1>
         <form method="post">
             {% csrf_token %}
             {{ form.position }}<br>
@@ -22,9 +22,11 @@
             {{ form.responsibilities }}<br>
             {{ form.requirements }}<br>
             {{ form.working_conditions }}<br>
-            <button class="btn btn-success" type="submit">Добавить вакансию</button>
-            <button class="btn btn-warning" type="submit">Редактировать вакансию</button>
+            <button class="btn btn-success" type="submit">Готово</button>
         </form>
     </div>
 
+{% endblock %}
+
+{% block info %}
 {% endblock %}

@@ -3,7 +3,6 @@ from django.shortcuts import render, redirect
 from .models import Vacancy
 from .forms import VacancyForm
 from django.views.generic import DetailView, UpdateView, DeleteView
-
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 def index(request):
@@ -13,7 +12,8 @@ def index(request):
         {
             'text_vacancy': 'Открытые вакансии',
             'text_about': 'Компания ООО "Транспортная Логистика" образована в 2007г. как автотранспортное подразделение группы компаний ЗАО "СЦЛ" (вертикально интегрированный холдинг, в состав которого входят добывающие, транспортные и судостроительные компании). На сегодняшний день, общая численность сотрудников холдинга составляет около 2000 человек. '
-                          'ООО "Транспортная логистика" специализируется на поставке инертных материалов автомобильным транспортом.'
+                          'ООО "Транспортная логистика" специализируется на поставке инертных материалов автомобильным транспортом.',
+            'vacancies_list': Vacancy.objects.all(),
         }
     )
 
