@@ -14,7 +14,7 @@ class UserLoginView(LoginView):
 class UserLogoutView(LogoutView):
     def post(self, request, *args, **kwargs):
         logout(request)
-        return redirect(self.next_page)
+        return redirect('/auth/login/')
 
 
 class UserRegistrationView(FormView):

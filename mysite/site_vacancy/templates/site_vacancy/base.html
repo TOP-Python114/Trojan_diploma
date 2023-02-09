@@ -11,6 +11,7 @@
     <title>{% block title %}Главная{% endblock %}</title>
 </head>
 <body>
+
   <header>
     <div class="image">
       <img src= "{% static 'image/TLog.jpg' %}" alt="Картинка">
@@ -20,7 +21,7 @@
     {% block authorization %}
     {% if not request.user.is_authenticated %}
     <div class="text-end">
-      <a href="/auth/login/"><button type="button" class="btn btn-sm btn-outline-secondary">Войти</button></a>
+      <a href="/auth/login/"><button type="button" class="btn btn-sm btn-outline-secondary">Авторизоваться</button></a>
       <a href="/auth/register/"><button type="button" class="btn btn-sm btn-outline-secondary">Зарегистрироваться</button></a>
     </div>
     {% else %}

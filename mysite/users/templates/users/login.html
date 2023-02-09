@@ -1,26 +1,12 @@
 
 
-<form method="post" action="{% url 'login' %}">
-        {% csrf_token %}
-    <h1 class="h3 mb-3 fw-normal">Введите имя пользователя и пароль</h1>
-        <table>
-            <tr>
-                <td>{{ form.username.label_tag }}</td>
-                <td>{{ form.username }}</td>
-            </tr>
-            <tr>
-                <td>{{ form.password.label_tag }}</td>
-                <td>{{ form.password }}</td>
-            </tr>
-        </table>
-    <div class="checkbox mb-3">
-        <label>
-            <input type="checkbox" value="remember-me"> Запомнить меня
-        </label>
-    </div>
-        <input type="submit" value="Вход" />
-        <div class="checkbox mb-3">
-        <input type="hidden" name="next" value="{{ next }}" />
+
+<h1>{{title}}</h1>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Войти</button>
 </form>
 
 

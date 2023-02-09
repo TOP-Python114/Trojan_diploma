@@ -4,13 +4,11 @@
 
 {% block title %}Вакансии{% endblock %}
 
-
 {% block button %}
 {% endblock %}
 
 {% block vacancy_list %}
 {% endblock %}
-
 
 {% block vacancy %}
 
@@ -39,7 +37,8 @@
           </ul>
         </div>
         {% if request.user.is_authenticated %}
-        <a href="mailto:Priem@tl70.ru?subject=Отклик на вакансию&body=Здравствуйте! Прошу Вас рассмотреть мое резюме на вакансию {{ vacancy.position }}." class="btn btn-warning">Откликнуться</a>
+        <a href="mailto:Priem@tl70.ru?subject=Отклик на вакансию&body=Здравствуйте!
+        Прошу Вас рассмотреть мое резюме на вакансию {{ vacancy.position }}." class="btn btn-warning">Откликнуться</a>
         {% endif %}
         {% if request.user.is_authenticated and request.user.is_staff %}
           <a href="/{{ vacancy.id }}\update" class="btn btn-warning">Редактировать</a>
