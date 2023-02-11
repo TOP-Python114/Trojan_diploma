@@ -1,12 +1,31 @@
+{% extends 'site_vacancy/base.html' %}
 
+{% load static %}
 
+{% block title %}{% endblock %}
 
-<h1>{{title}}</h1>
+{% block authorization %}
+{% endblock %}
 
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Войти</button>
-</form>
+{% block button %}
+{% endblock %}
 
+{% block vacancy_list %}
+{% endblock %}
 
+{% block login %}
+<div id="vacancy1">
+    <div class="card-header py-3">
+        <h1>Вход на сайт</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Войти</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block info %}
+{% endblock %}

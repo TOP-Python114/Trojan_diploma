@@ -1,9 +1,8 @@
 from django.contrib.auth import logout
-from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.views import LoginView, LogoutView
-from django.shortcuts import redirect
 from django.views.generic import FormView
-
+from django.shortcuts import redirect
+from .forms import CustomUserCreationForm
 
 
 
@@ -18,10 +17,12 @@ class UserLogoutView(LogoutView):
 
 
 class UserRegistrationView(FormView):
-    form_class = UserCreationForm
+    form_class = CustomUserCreationForm
     template_name = 'users/register.html'
     success_url = '/auth/login/'
 
-    def form_valid(self, form: UserCreationForm):
+    def form_valid(self, form: CustomUserCreationForm):
         form.save()
         return redirect(self.get_success_url())
+
+

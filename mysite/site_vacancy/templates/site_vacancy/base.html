@@ -30,7 +30,7 @@
     </div>
     {% endif %}
     {% endblock %}
-    {% if request.user.is_authenticated and request.user.is_staff %}
+    {% if request.user.is_staff %}
       {% block button %}
         <div class="admin">
             <a href="/create"><button class="btn btn-success" type="submit">Добавить вакансию</button></a>
@@ -43,7 +43,7 @@
       <div class="conteiner">
           <h1 class="name-vacancy">{{text_vacancy}}</h1>
         {% for vacancy in vacancies_list %}
-        <up><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="/page_vacancy">
+        <up><a class="dropdown-item d-flex align-items-center gap-2 py-2" data-bs-toggle="tooltip" data-bs-placement="right" title="Нажмите для перехода к подробному описанию вакансий" href="/page_vacancy">
             <span class="d-inline-block bg-primary rounded-circle p-1"></span>
             {{ vacancy.position }}
         </a></up>
@@ -64,7 +64,12 @@
       </div>
     </div>
     {% endblock %}
+    
+    {% block login %}
+    {% endblock %}
 
+    {% block regisret %}
+    {% endblock %}
 
     {% block content %}
     {% endblock %}
